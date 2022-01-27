@@ -1,0 +1,19 @@
+create table students(
+Roll_Number int, 
+Student_Name varchar(20),
+Student_Semester varchar(15),
+Student_Gender varchar(10),
+student_State varchar(15),
+Student_City varchar(15),
+Student_Email varchar(30)
+)
+
+insert into students values
+(1,'Piyush Potbhare','Fourth','Male','Maharashtra','Nagpur','piyushpotbhare@gmail.com'),
+(21,'Himanshi Shah','Third','Female','Maharashtra','Pune','shan@gmail.com'),
+(12,'Ravina Tai','First','Female','Maharashtra','Mumbai','ravi@gmail.com'),
+(14,'Pawan Gupta','Sixth','Male','Maharashtra','Nagpur','gupta@gmail.com'),
+(10,'Chetan Charpe','Second','Male','Maharashra','Pune','Charpechetan@gmail.com'),
+(8,'Shikha Chaubey','Fifth','Female','Maharashtra','Mumbai','Shikha123@gmail.com')
+
+select *from students
