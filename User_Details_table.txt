@@ -1,0 +1,30 @@
+create table Userdetails(
+User_id int, 
+User_Name varchar(20),
+Password varchar(15),
+User_Gender varchar(10),
+User_State varchar(15),
+User_City varchar(15),
+User_Country varchar(25),
+User_Email varchar(30)
+)
+
+insert into Userdetails values
+(1,'Piyush Potbhare','Fourth55','Male','Maharashtra','Nagpur','India','piyushpotbhare@gmail.com'),
+(21,'Himanshi Shah','Th41ird','Female','Maharashtra','Pune','India','shan@gmail.com'),
+(12,'Ravina Tai','Fi8r94st','Female','Maharashtra','Mumbai','India','ravi@gmail.com'),
+(14,'Pawan Gupta','Si2x3t5h','Male','Maharashtra','Nagpur','India','gupta@gmail.com'),
+(10,'Chetan Charpe','S8e5c2ond','Male','Maharashra','Pune','India','Charpechetan@gmail.com'),
+(8,'Shikha Chaubey','Fi8ft4h8','Female','Maharashtra','Mumbai','India','Shikha123@gmail.com'),
+(9,'Krunal Jibhkate','Fi855fth','Male','Maharashtra','Mumbai','India','Krunal@gmail.com'),
+(7,'Kshitij Dhoble','First444','Male','Maharashtra','Nagpur','India','kshitij23@gmail.conm'),
+(5,'Pallavi Manapur','Seco8nd84','Female','Maharashtra','Pune','India','pallavi89@gmail.com'),
+(3,'Jayesh Mehar','Thi4r8d','Male','Maharashtra','Nagpur','India','mehar@gmail.com'),
+(11,'Prachi Ragit','Thi4rd9','Female','Maharashtra','Nagpur','India','prachi@gmail.com'),
+(13,'Nikunj Bopche','Sixth445','Male','Maharashtra','Pune','India','nik2345@gmail.com'),
+(18,'Tushar Bisen','S2eve8nth4','Male','Maharashtra','Mumbai','India','tushar67@gmail.com'),
+(19,'Vaishnavi Nikam','S8e5ve6nth55','Female','Maharashtra','Nagpur','India','vaishnavi3456@gmail.com'),
+(23,'Priya Chauhan','First','Fema48le','Maharashtra','Pune','India','priyanka23457@gmail.com')
+
+
+select *from Userdetails
