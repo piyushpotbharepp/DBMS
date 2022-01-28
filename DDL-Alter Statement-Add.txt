@@ -1,0 +1,25 @@
+/* 
+Data Definition Language - Alter Statement ( Add )
+-------------------------------------------
+The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.
+The ALTER TABLE statement is also used to add and drop various constraints on an existing table.
+*/
+
+create table students(
+Roll_Number int, 
+Student_Name varchar(20),
+Student_Semester varchar(15),
+Student_Gender varchar(10),
+student_State varchar(15),
+Student_City varchar(15),
+Student_Email varchar(30)
+)
+
+alter table students
+add Parents_Name varchar(20), Parents_Number int
+
+select *from students
+
+/*
+After running the above query Students table will add columns Parents_Name and Parents_Number.
+*/
