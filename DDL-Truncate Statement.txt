@@ -1,0 +1,25 @@
+/* 
+Data Definition Language - Truncate Statement
+-------------------------------------------
+The result of this operation quickly removes all data from a table, typically bypassing a number of integrity enforcing mechanisms.
+Truncate operations drop and re-create the table, which is much faster than deleting rows one by one, particularly for large tables.
+Truncation operations do not return a meaningful value for the number of deleted rows. 
+The usual result is “0 rows affected,” which should be interpreted as “no information.”
+*/
+
+create table students(
+Roll_Number int, 
+Student_Name varchar(20),
+Student_Semester varchar(15),
+Student_Gender varchar(10),
+student_State varchar(15),
+Student_City varchar(15),
+Student_Email varchar(30)
+)
+
+truncate table students
+
+/*
+After running the above query Students table will be truncated, 
+i.e, the data will be deleted but the structure will remain in the memory for further operations.
+*/
