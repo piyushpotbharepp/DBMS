@@ -1,0 +1,19 @@
+/* 
+Data Definition Language - Create Statement
+-------------------------------------------
+This command is used to create a new table in SQL. 
+The user has to give information like table name, column names, and their datatypes.
+*/
+
+create table students(
+Roll_Number int, 
+Student_Name varchar(20),
+Student_Semester varchar(15),
+Student_Gender varchar(10),
+student_State varchar(15),
+Student_City varchar(15),
+Student_Email varchar(30)
+)
+
+select *from students
+
