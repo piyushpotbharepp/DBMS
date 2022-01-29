@@ -1,0 +1,39 @@
+/* 
+Data Query Language - SELECT Statement ( ALL Keyword Using Where)  
+-------------------------------------------
+The ALL keyword retains duplicate rows. 
+It will display every row of the table without considering duplicate entries.
+*/
+
+create table students(
+Roll_Number int, 
+Student_Name varchar(20),
+Student_Semester varchar(15),
+Student_Gender varchar(10),
+student_State varchar(15),
+Student_City varchar(15),
+Student_Email varchar(30)
+)
+
+insert into students values
+(1,'Piyush Potbhare','Fourth','Male','Maharashtra','Nagpur','piyushpotbhare@gmail.com'),
+(21,'Himanshi Shah','Third','Female','Maharashtra','Pune','shan@gmail.com'),
+(12,'Ravina Tai','First','Female','Maharashtra','Mumbai','ravi@gmail.com'),
+(14,'Pawan Gupta','Sixth','Male','Maharashtra','Nagpur','gupta@gmail.com'),
+(10,'Chetan Charpe','Second','Male','Maharashra','Pune','Charpechetan@gmail.com'),
+(8,'Shikha Chaubey','Fifth','Female','Maharashtra','Mumbai','Shikha123@gmail.com'),
+(9,'Krunal Jibhkate','Fifth','Male','Maharashtra','Mumbai','Krunal@gmail.com'),
+(7,'Kshitij Dhoble','First','Male','Maharashtra','Nagpur','kshitij23@gmail.conm'),
+(5,'Pallavi Manapur','Second','Female','Maharashtra','Pune','pallavi89@gmail.com'),
+(3,'Jayesh Mehar','Third','Male','Maharashtra','Nagpur','mehar@gmail.com'),
+(11,'Prachi Ragit','Third','Female','Maharashtra','Nagpur','prachi@gmail.com'),
+(13,'Nikunj Bopche','Sixth','Male','Maharashtra','Pune','nik2345@gmail.com'),
+(18,'Tushar Bisen','Seventh','Male','Maharashtra','Mumbai','tushar67@gmail.com'),
+(19,'Vaishnavi Nikam','Seventh','Female','Maharashtra','Nagpur','vaishnavi3456@gmail.com'),
+(23,'Priya Chauhan','First','Female','Maharashtra','Pune','priyanka23457@gmail.com')
+
+select all Student_City from students where Student_City='Nagpur'
+
+/*
+After running the above select all statement Students table will show all values where Students_City is Nagpur.
+*/
