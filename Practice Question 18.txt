@@ -1,0 +1,38 @@
+/* 
+From the following table, write a SQL query to find the details of the Nobel Prize winner 'Johannes Georg Bednorz'. 
+Return year, subject, winner, country, and category.
+
+YEAR SUBJECT                   WINNER                                        COUNTRY                CATEGORY
+---- ------------------------- --------------------------------------------- ------------------------- ------------
+1952 Physics                   Hannes Alfven                                 Sweden                 Scientist
+1970 Physics                   Louis Neel                                    France                 Scientist
+1973 Chemistry                 Luis Federico Leloir                          France                 Scientist
+1977 Physiology                Ulf von Euler                                 Sweden                 Scientist
+1953 Physiology                Bernard Katz                                  Germany                Scientist
+1978 Peace					   Dennis Gabor									 Russia					Scientist
+1967 Literature                Johannes Georg Bednorz                        Russia                 Linguist
+1967 Physiology				   Dennis Gabor                                  Russia 				Scientist
+1971 Economics                 Paul Samuelson                                USA					Scientist
+*/
+
+create table Nobel_Prize_Winner(
+YEAR int,
+SUBJECT varchar(20),
+WINNER varchar(50),
+COUNTRY varchar(20),
+CATEGORY varchar(20)
+)
+
+insert into Nobel_Prize_Winner values
+(1952,'Physics','Hannes Alfven','Sweden','Scientist'),
+(1970,'Physics','Louis Neel','France','Scientist'),
+(1973,'Chemistry','Luis Federico Leloir','France','Scientist'),
+(1977,'Physiology','Ulf von Euler','Sweden','Scientist'),
+(1953,'Physiology','Bernard Katz','Germany','Scientist'),
+(1975,'Peace','Bernard Katz','Germany','Scientist'),
+(1978,'Literature','Johannes Georg Bednorz','Russia','Linguist'),
+(1967,'Physiology','Dennis Gabor','Russia','Scientist'),
+(1971,'Economics','Paul Samuelson','USA','Scientist')
+
+select * from Nobel_Prize_Winner where WINNER='Johannes Georg Bednorz'
+
