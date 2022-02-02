@@ -1,0 +1,36 @@
+/* 
+From the following table, write a SQL query to find the Nobel Prize winner 'Dennis Gabor'. 
+Return year, subject. 
+
+YEAR SUBJECT                   WINNER                                        COUNTRY                CATEGORY
+---- ------------------------- --------------------------------------------- ------------------------- ------------
+1970 Physics                   Hannes Alfven                                 Sweden                 Scientist
+1970 Physics                   Louis Neel                                    France                 Scientist
+1970 Chemistry                 Luis Federico Leloir                          France                 Scientist
+1970 Physiology                Ulf von Euler                                 Sweden                 Scientist
+1970 Physiology                Bernard Katz                                  Germany                Scientist
+1970 Physiology				   Dennis Gabor									 Russia					Scientist
+1970 Literature                Aleksandr Solzhenitsyn                        Russia                 Linguist
+1970 Economics                 Paul Samuelson                                USA					Scientist
+*/
+
+create table Nobel_Prize_Winner(
+YEAR int,
+SUBJECT varchar(20),
+WINNER varchar(50),
+COUNTRY varchar(20),
+CATEGORY varchar(20)
+)
+
+insert into Nobel_Prize_Winner values
+(1970,'Physics','Hannes Alfven','Sweden','Scientist'),
+(1970,'Physics','Louis Neel','France','Scientist'),
+(1970,'Chemistry','Luis Federico Leloir','France','Scientist'),
+(1970,'Physiology','Ulf von Euler','Sweden','Scientist'),
+(1970,'Physiology','Bernard Katz','Germany','Scientist'),
+(1970,'Literature','Aleksandir Solzhenitsyn','Russia','Linguist'),
+(1970,'Physiology','Dennis Gabor','Russia','Scientist'),
+(1970,'Economics','Paul Samuelson','USA','Scientist')
+
+select YEAR, SUBJECT from Nobel_Prize_Winner where WINNER='Dennis Gabor'
+select *from Nobel_Prize_Winner
