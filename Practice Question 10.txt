@@ -33,4 +33,3 @@ insert into Nobel_Prize_Winner values
 (1970,'Economics','Paul Samuelson','USA','Scientist')
 
 select YEAR, SUBJECT from Nobel_Prize_Winner where WINNER='Dennis Gabor'
-select *from Nobel_Prize_Winner
