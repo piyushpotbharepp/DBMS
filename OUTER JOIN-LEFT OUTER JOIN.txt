@@ -1,0 +1,89 @@
+/*
+Understanding OUTER JOIN-LEFT OUTER JOIN
+------------------------------------------
+The LEFT OUTER JOIN retrieves all the records from the left table and matching rows from the right table. 
+It will return NULL when no matching record is found in the right side table
+*/
+create table student_details(
+Student_ID int primary key identity,
+Student_First_Name varchar(15) not null,
+Student_Last_Name varchar(15) not null,
+Admission_Number varchar(10) not null,
+Student_Age int,
+Student_City varchar(15),
+Student_State varchar(25),
+Student_Country varchar(25)
+)
+
+create table fees_details(
+Admission_Number varchar(10) not null,
+Registerd_Course varchar(45) not null,
+Amount_Paid int not null
+)
+
+insert into student_details values
+('Mohit','Gadhave','ASF949GU45',23,'Nagpur','Maharashtra','India'),
+('Ayush','Bhivgade','HJF954GU45',21,'Mumbai','Maharashtra','India'),
+('Tejal','Bhagvat','ASF949HH67',20,'Pune','Maharashtra','India'),
+('Piyush','Manapure','SASF955U45',23,'Nagpur','Maharashtra','India'),
+('Krunal','Jibhkate','GHF779GU45',19,'Nagpur','Maharashtra','India'),
+('Himanshu','Navghare','KIH965GU76',26,'Mumbai','Maharashtra','India'),
+('Sikandar','Virani','GYV923GU45',23,'Nagpur','Maharashtra','India'),
+('Piyush','Potbhare','GLH749GU45',23,'Nagpur','Maharashtra','India'),
+('Gayatri','Bhoskar','JHK949GU45',23,'Nagpur','Maharashtra','India'),
+('Pawan','Gupta','YFF898GU45',23,'Pune','Maharashtra','India'),
+('Himanshu','Wadekar','LOP949GU45',29,'Nagpur','Maharashtra','India'),
+('Maggy','Dhoble','WEF949GU67',26,'Pune','Maharashtra','India'),
+('Amit','Wadibhasme','TYF949BV45',23,'Mumbai','Maharashtra','India'),
+('Bandu','Sahare','AHG949GU89',29,'Nagpur','Maharashtra','India'),
+('Ravina','Waghamre','NBV949GU49',40,'Mumbai','Maharashtra','India'),
+('Paritosh','Thakre','DSA949G767',23,'Pune','Maharashtra','India'),
+('Shweta','Sahare','LOP949GU55',25,'Nagpur','Maharashtra','India'),
+('Vaishanavi','Nikam','GF5249GU45',26,'Nagpur','Maharashtra','India'),
+('Vaishnavi','Kalbhande','GBX949GU48',23,'Nagpur','Maharashtra','India'),
+('Sachi','Mowade','XZF9458U45',28,'Pune','Maharashtra','India'),
+('Mayuri','Chandanbatwe','LWS949GU85',29,'Mumbai','Maharashtra','India'),
+('Sahil','Gaidhane','QWS949GU95',20,'Pune','Maharashtra','India'),
+('Swati','Sorte','ESS949GU85',29,'Mumbai','Maharashtra','India'),
+('Doma','Bhisikar','ISS889GU85',39,'Pune','Maharashtra','India'),
+('Shantanu','Tijare','CZS889GU85',39,'Pune','Maharashtra','India')
+
+insert into fees_details values
+('HJF954GU45','Java',23000),
+('SASF955U45','Dot NEt',45000),
+('KIH965GU76','Java Script',77000),
+('GLH749GU45','Angular',34000),
+('YFF898GU45','Nodes',11000),
+('JHK949GU45','DBMS',23000),
+('GHF779GU45','Java',65000),
+('ASF949HH67','Mongo',99000),
+('ASF949GU45','DBMS',77000),
+('WEF949GU67','Bootstrap',34000),
+('AHG949GU89','HTML',23000),
+('DSA949G767','CSS',29000),
+('GF5249GU45','Bootstrap',45000),
+('XZF9458U45','HTML',12000),
+('LWS949GU85','CSS',46000),
+('GBX949GU48','HTML',14000),
+('NBV949GU49','Java',55000),
+('TYF949BV45','DBMS',28000),
+('LOP949GU45','Java',19000),
+('ESS949GU85','DBMS',66000),
+('QWS949GU95','Java',88000),
+('ISS889GU85','DBMS',78000),
+('CZS889GU85','Angular',45000)
+
+select 
+student_details.Admission_Number, 
+student_details.Student_First_Name, 
+student_details.Student_Last_Name, 
+fees_details.Registerd_Course, 
+fees_details.Amount_Paid,
+student_details.Student_Age,
+student_details.Student_City,
+student_details.Student_State,
+student_details.Student_Country
+from student_details
+left outer join fees_details
+on student_details.Admission_Number=fees_details.Admission_Number;
+
