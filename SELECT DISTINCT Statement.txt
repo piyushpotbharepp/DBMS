@@ -1,0 +1,44 @@
+/*
+Understanding SELECT DISTINCT Statement
+------------------------------------------
+The SELECT DISTINCT Statement is used to select only distinct or different values.
+*/
+create table student_details(
+Student_ID int primary key identity,
+Student_First_Name varchar(15) not null,
+Student_Last_Name varchar(15) not null,
+Admission_Number varchar(10) not null,
+Student_Age int,
+Student_City varchar(15),
+Student_State varchar(25),
+Student_Country varchar(25)
+)
+
+insert into student_details values
+('Mohit','Gadhave','ASF949GU45',23,'Nagpur','Maharashtra','India'),
+('Ayush','Bhivgade','HJF954GU45',21,'Mumbai','Maharashtra','India'),
+('Tejal','Bhagvat','ASF949HH67',20,'Pune','Maharashtra','India'),
+('Piyush','Manapure','SASF955U45',23,'Nagpur','Maharashtra','India'),
+('Krunal','Jibhkate','GHF779GU45',19,'Nagpur','Maharashtra','India'),
+('Himanshu','Navghare','KIH965GU76',26,'Mumbai','Maharashtra','India'),
+('Sikandar','Virani','GYV923GU45',23,'Nagpur','Maharashtra','India'),
+('Piyush','Potbhare','GLH749GU45',23,'Nagpur','Maharashtra','India'),
+('Gayatri','Bhoskar','JHK949GU45',23,'Nagpur','Maharashtra','India'),
+('Pawan','Gupta','YFF898GU45',23,'Pune','Maharashtra','India'),
+('Himanshu','Wadekar','LOP949GU45',29,'Nagpur','Maharashtra','India'),
+('Maggy','Dhoble','WEF949GU67',26,'Pune','Maharashtra','India'),
+('Amit','Wadibhasme','TYF949BV45',23,'Mumbai','Maharashtra','India'),
+('Bandu','Sahare','AHG949GU89',29,'Nagpur','Maharashtra','India'),
+('Ravina','Waghamre','NBV949GU49',40,'Mumbai','Maharashtra','India'),
+('Paritosh','Thakre','DSA949G767',23,'Pune','Maharashtra','India'),
+('Shweta','Sahare','LOP949GU55',25,'Nagpur','Maharashtra','India'),
+('Vaishanavi','Nikam','GF5249GU45',26,'Nagpur','Maharashtra','India'),
+('Vaishnavi','Kalbhande','GBX949GU48',23,'Nagpur','Maharashtra','India'),
+('Sachi','Mowade','XZF9458U45',28,'Pune','Maharashtra','India'),
+('Mayuri','Chandanbatwe','LWS949GU85',29,'Mumbai','Maharashtra','India'),
+('Sahil','Gaidhane','QWS949GU95',20,'Pune','Maharashtra','India'),
+('Swati','Sorte','ESS949GU85',29,'Mumbai','Maharashtra','India'),
+('Doma','Bhisikar','ISS889GU85',39,'Pune','Maharashtra','India'),
+('Shantanu','Tijare','CZS889GU85',39,'Pune','Maharashtra','India')
+
+select distinct Student_City from student_details
